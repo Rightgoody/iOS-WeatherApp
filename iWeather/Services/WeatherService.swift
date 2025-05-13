@@ -3,7 +3,7 @@ import CoreLocation
 
 /// Service responsible for fetching weather data from external APIs
 class WeatherServiceManager {
-    private let apiKey = ""
+    private let apiKey = "ea53bd41a55a7f295942ddeac5f42d3f"
 
     // Fetch weather by city name (manual entry)
     func fetchWeather(for city: String) async throws -> WeatherData {
