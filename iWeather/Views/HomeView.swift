@@ -66,13 +66,24 @@ struct HomeView: View {
 
                 Spacer()
                 
-                NavigationLink(destination: MapScreen()) {
-                    Label("Map", systemImage: "map.fill")
-                        .font(.headline)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue.opacity(0.2))
-                        .cornerRadius(10)
+                HStack(spacing: 16) {
+                    NavigationLink(destination: MapScreen()) {
+                        Label("Map", systemImage: "map.fill")
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue.opacity(0.2))
+                            .cornerRadius(10)
+                    }
+                    
+                    NavigationLink(destination: ForecastScreen()) {
+                        Label("Forecast", systemImage: "calendar")
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue.opacity(0.2))
+                            .cornerRadius(10)
+                    }
                 }
                 .padding(.horizontal)
             }
