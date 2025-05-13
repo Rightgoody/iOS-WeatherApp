@@ -4,7 +4,7 @@ import CoreLocation
 /// Main view displaying current weather information
 struct HomeView: View {
     @StateObject private var viewModel = WeatherViewModel()
-    @State private var manualCity = "ea53bd41a55a7f295942ddeac5f42d3f"
+    @State private var manualCity = ""
 
     var body: some View {
         NavigationView {
