@@ -76,7 +76,7 @@ struct HomeView: View {
                             .cornerRadius(10)
                     }
                     
-                    NavigationLink(destination: ForecastScreen()) {
+                    NavigationLink(destination: ForecastScreen(city: "Cupertino")) {
                         Label("Forecast", systemImage: "calendar")
                             .font(.headline)
                             .padding()
