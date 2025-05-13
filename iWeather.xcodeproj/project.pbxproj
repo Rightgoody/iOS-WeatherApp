@@ -30,7 +30,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+<<<<<<< HEAD
 		7A3A7FBA2DD312AD00BEC951 /* Exceptions for "iWeather" folder in "iWeather" target */ = {
+=======
+		E252DC032DD312B700926416 /* Exceptions for "iWeather" folder in "iWeather" target */ = {
+>>>>>>> main
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -43,7 +47,11 @@
 		E26F40DC2DD2CF74006873B1 /* iWeather */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+<<<<<<< HEAD
 				7A3A7FBA2DD312AD00BEC951 /* Exceptions for "iWeather" folder in "iWeather" target */,
+=======
+				E252DC032DD312B700926416 /* Exceptions for "iWeather" folder in "iWeather" target */,
+>>>>>>> main
 			);
 			path = iWeather;
 			sourceTree = "<group>";

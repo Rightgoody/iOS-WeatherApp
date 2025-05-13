@@ -4,7 +4,7 @@ import CoreLocation
 /// Main view displaying current weather information
 struct HomeView: View {
     @StateObject private var viewModel = WeatherViewModel()
-    @State private var manualCity = ""
+    @State private var manualCity = "ea53bd41a55a7f295942ddeac5f42d3f"
 
     var body: some View {
         NavigationView {
@@ -65,6 +65,16 @@ struct HomeView: View {
                 }
 
                 Spacer()
+                
+                NavigationLink(destination: MapScreen()) {
+                    Label("Map", systemImage: "map.fill")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue.opacity(0.2))
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
             }
             .padding()
             .navigationTitle("iWeather")
