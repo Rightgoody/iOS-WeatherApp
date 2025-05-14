@@ -1,7 +1,5 @@
 import SwiftUI
-import CoreLocation
 
-/// Main view displaying current weather information
 struct HomeView: View {
     @StateObject private var viewModel = WeatherViewModel()
     @State private var manualCity = ""
@@ -35,7 +33,6 @@ struct HomeView: View {
                         .foregroundColor(.gray)
                 }
 
-                // Use location button
                 Button(action: {
                     viewModel.requestLocation()
                 }) {
@@ -46,7 +43,6 @@ struct HomeView: View {
                         .cornerRadius(10)
                 }
 
-                // Manual city entry fallback
                 HStack {
                     TextField("Enter a city", text: $manualCity)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -55,9 +51,9 @@ struct HomeView: View {
                             await viewModel.fetchWeather(for: manualCity)
                         }
                     }
-                }.padding(.horizontal)
+                }
+                .padding(.horizontal)
 
-                // Error message if any
                 if let error = viewModel.errorMessage {
                     Text(error)
                         .foregroundColor(.red)
@@ -76,7 +72,7 @@ struct HomeView: View {
                             .cornerRadius(10)
                     }
                     
-                    NavigationLink(destination: ForecastScreen()) {
+                    NavigationLink(destination: ForecastScreen(viewModel: viewModel)) {
                         Label("Forecast", systemImage: "calendar")
                             .font(.headline)
                             .padding()
@@ -93,6 +89,8 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView()
-} 
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
+}
